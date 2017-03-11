@@ -9,7 +9,7 @@
 
         <p><input type="text" ng-model="test" placeholder="Искать...">
 
-        Название задачи:<span ng-bind="test"></span></p>
+        Название задачи:<span ng-bind="test" class="test"></span></p>
 
         <div class="col-sm-9"></div>
         <div class="col-sm-3" id="time"></div>
@@ -63,9 +63,9 @@
 
                     <td>
                         @if(!$task->users->isEmpty())
-                            <ol ng-controller="usersCtrl">
+                            <ol >
         @foreach($task->users as $user)
-                      <li ng-repeat="y in users | filter:test" ng-if="'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}' == y"><a href="{{route('tasks.showUser',compact('user') )}}" ng-bind="y"></a></li></br>
+                      <li ><a href="{{route('tasks.showUser',compact('user') )}}" >{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a></li></br>
         @endforeach
                             </ol>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal2">
@@ -134,22 +134,16 @@
                     @foreach($tasks as $task)
                     { task:'{{$task->task}}',taskValue:'{{$task->task_value}}',id:'{{$task->id}}'},
                     @endforeach
+
                 ];
 
             });
-            app.controller('usersCtrl', function($scope) {
-                $scope.users = [
-                        @foreach($users as $user)
-                    '{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}',
-                    @endforeach
-                ];
 
-            });
         </script>
-        <script>
-            $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
-            });
-        </script>
+
     </div>
-
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>

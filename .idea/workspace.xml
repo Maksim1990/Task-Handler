@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b51ebb25-7811-4472-807f-103215b003c1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/tasks/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/tasks/index.blade.php" />
     </list>
     <ignored path="laravel.com.iws" />
@@ -24,28 +26,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="480">
+              <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/tasks/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-                <marker date="1489267744697" expanded="true" signature="2090:2637" ph="..." />
-                <marker date="1489267744697" expanded="true" signature="2180:2191" ph="..." />
-                <marker date="1489267744697" expanded="true" signature="2307:2320" ph="..." />
-                <marker date="1489267744697" expanded="true" signature="2437:2449" ph="..." />
-                <marker date="1489267744697" expanded="true" signature="2565:2575" ph="..." />
+                <marker date="1489268862191" expanded="true" signature="2103:2650" ph="..." />
+                <marker date="1489268862191" expanded="true" signature="2193:2204" ph="..." />
+                <marker date="1489268862191" expanded="true" signature="2320:2333" ph="..." />
+                <marker date="1489268862191" expanded="true" signature="2450:2462" ph="..." />
+                <marker date="1489268862191" expanded="true" signature="2578:2588" ph="..." />
               </folding>
             </state>
           </provider>
@@ -204,9 +206,9 @@
         <option value="$PROJECT_DIR$/resources/views/tasks/assignUser.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layots/app.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/resources/views/tasks/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/tasks/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
       </list>
     </option>
   </component>
@@ -548,12 +550,12 @@
       <workItem from="1487239857923" duration="1245000" />
       <workItem from="1487761863512" duration="73000" />
       <workItem from="1489067088164" duration="646000" />
-      <workItem from="1489081599671" duration="85698000" />
+      <workItem from="1489081599671" duration="87058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308064000" />
+    <option name="totallyTimeSpent" value="309424000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,7 +567,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <frame x="-7" y="0" width="1370" height="735" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1015,14 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tasks/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-554">
@@ -1047,16 +1041,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tasks/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="152" column="17" selection-start-line="152" selection-start-column="17" selection-end-line="152" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1489267744697" expanded="true" signature="2090:2637" ph="..." />
-            <marker date="1489267744697" expanded="true" signature="2180:2191" ph="..." />
-            <marker date="1489267744697" expanded="true" signature="2307:2320" ph="..." />
-            <marker date="1489267744697" expanded="true" signature="2437:2449" ph="..." />
-            <marker date="1489267744697" expanded="true" signature="2565:2575" ph="..." />
+            <marker date="1489268862191" expanded="true" signature="2103:2650" ph="..." />
+            <marker date="1489268862191" expanded="true" signature="2193:2204" ph="..." />
+            <marker date="1489268862191" expanded="true" signature="2320:2333" ph="..." />
+            <marker date="1489268862191" expanded="true" signature="2450:2462" ph="..." />
+            <marker date="1489268862191" expanded="true" signature="2578:2588" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
