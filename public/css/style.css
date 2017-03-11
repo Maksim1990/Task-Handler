@@ -1,0 +1,44 @@
+
+.main1 {
+    margin-top: 100px;
+    border:1px dashed green;
+    box-shadow: 8px 15px 20px rgba(0,0,0,0.2);
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+
+}
+table{
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+th, td {width:150px;
+padding: 10px 10px 10px 10px;}
+td{position: relative;}
+.fa-info-circle {
+    color:black;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.fa-question-circle{color:darkblue;
+    font-size: 35px;
+margin-top:10px;
+margin-left:10px;
+    text-shadow: 2px 2px 20px gray;}
+.fa-question-circle:hover {
+    text-shadow:none;
+}
+.info {padding: 15px 10px 5px 10px;
+text-align: left;}
+.info span>i {margin-right: 10px;}
+.two h2>span  {font-size: 21px;}
+.two img {    object-fit: cover;}
+#home, #back {width: 70px;
+    height: 70px;
+    margin-bottom:20px;}
+/*#home:hover, #back:hover {*/
+    /*width:75px;*/
+    /*height:75px;}*/

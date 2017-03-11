@@ -1,0 +1,31 @@
+Welcome to MusicLibrary application!
+
+In order to start please proceed following instructions:
+
+- create folder on your local computer with name musiclibrary.proj
+- clone latest application from GitHub https://github.com/Maksim1990/MusicLibrary.git
+- add new domain to your local server (all application functionality were tested on the latest version of OpenServer.
+OpenServer settings:
+1.Settings->Domains
+2. Add new domain with any name, for example "musicLibrary.proj", domain folder - choose Public folder in downloaded application.
+3.Press Save.)
+- Go to the musicLibrary.proj/posts and enjoy application.
+
+
+
+This application were tested under following conditions:
+Windows 10 Pro, Processor(R) Dual-Core CPU T4500 @ 2.30GHz 2.30 GHz,
+RAM 2GB,
+System Type: 32-bit,
+OpenServer cross-platform web server solution
+Apache-2.4
+PHP-5.6
+MySQL-5.5
+Backend -Laravel framework
+
+Also this application is available online at the following address :
+http://discoveringworld.net/laravel/posts
+
+Go to the above mentioned address and review and test all functionality of Music Library application!
+
+
