@@ -43,7 +43,22 @@
                             <h4 class="modal-title" id="myModalLabel">О приложении Task Handler</h4>
                         </div>
                         <div class="modal-body">
+                          <p>  Данное приложение позволяет эффективно управлять командными процессами и задачами, назначая исполнителей, устанавливая сроки и внося изменения в рабочем процессе. Имеется возможность добавлять новых пользователей,а также переназначать их на другие задачи по ходу выполнения задачи. Статус задачи отображается в зависимости от выбранного состояния и по ходу выполнения его можно изменять.</p>
+                            <button data-toggle="collapse" class="btn btn-info" data-target="#demo">Полезная информация о статусе задачи</button></br></br>
 
+                            <div id="demo" class="collapse">
+                                <p class='info'>
+                                    <span><i class='fa fa-circle' aria-hidden='true' style='color:blue;'></i>Не начата</span></br>
+                                    <span><i class='fa fa-circle' aria-hidden='true' style='color:yellow;'></i>В процессе</span></br>
+                                    <span><i class='fa fa-circle' aria-hidden='true' style='color:green;'></i>Завершена</span></br>
+                                    <span><i class='fa fa-circle' aria-hidden='true' style='color:red;'></i>Отложена</span></br>
+                                </p>
+                            </div>
+                            <button data-toggle="collapse" class="btn btn-info" data-target="#demo2">Полезная информация о добавлении новых пользователей</button>
+
+                            <div id="demo2" class="collapse">
+                       <p>    Для добавления новых пользователей перейдите в раздел <a href="{{route('tasks.createUser')}}" >"Создать нового пользователя"</a> и заполните поля, указав его ФИО, а также занимаемую должность. Далее можно перейти в раздел <a href="{{route('tasks.index')}}" >"Список задач" </a> и назначить нового пользователя на необходимую задачу.</p>
+                            </div>
                         </div>
                         <div class="modal-footer">
 
