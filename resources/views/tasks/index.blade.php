@@ -3,13 +3,16 @@
 @section ('content')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <div class="col-sm-10 col-sm-offset-1  main" >
-
-            <div class="col-sm-9"></div>
-            <div class="col-sm-3" id="time"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <div class="col-sm-10 col-sm-offset-1  main" ng-app="myApp" ng-controller="namesCtrl" >
 
 
+        <p><input type="text" ng-model="test" placeholder="Искать...">
 
+        Название задачи:<span ng-bind="test"></span></p>
+
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3" id="time"></div>
             <table style="width:100%">
 
                 <tr>
@@ -25,15 +28,15 @@
                 <?php $i=1; ?>
                 @foreach($tasks as $task)
 
-                <tr>
+                <tr  ng-repeat="x in names | filter:test" ng-if="'{{$task->task}}' == x.task">
 
                     <td><?= $i;?></td>
                     <?php $i++;?>
-                    <td>{{$task->id}}</td>
+                    <td ng-bind="x.id"></td>
                     <td>
-                        <a href="{{route('tasks.edit',compact('task') )}}" >{{$task->task}}</a>
+                        <a href="{{route('tasks.edit',compact('task') )}}" ng-bind="x.task"></a>
                     </td>
-                    <td>{{$task->task_value}}</td>
+                    <td ng-bind="x.taskValue"></td>
                     <td>{{$task->start_date}}</td>
                     <td>{{$task->finish_date}}</td>
                     <?php
@@ -60,9 +63,9 @@
 
                     <td>
                         @if(!$task->users->isEmpty())
-                            <ol>
+                            <ol ng-controller="usersCtrl">
         @foreach($task->users as $user)
-                      <li><a href="{{route('tasks.showUser',compact('user') )}}">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a></li></br>
+                      <li ng-repeat="y in users | filter:test" ng-if="'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}' == y"><a href="{{route('tasks.showUser',compact('user') )}}" ng-bind="y"></a></li></br>
         @endforeach
                             </ol>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal2">
@@ -76,7 +79,7 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <h4 class="modal-title" id="myModalLabel">Выбрать исполнителя</h4>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body" >
                                             @foreach($users as $user)
                                                 <a href="{{route('tasks.assignUser',compact('user') )}}" class="btn btn-success btn-sm">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a>
                                             @endforeach
@@ -121,13 +124,32 @@
             </table>
 
 
-    <h6><a href="{{route('tasks.create')}}" >Create New Task</a></h6>
-    <h6><a href="{{route('tasks.createUser')}}" >Create New User</a></h6>
+    <h6><a href="{{route('tasks.create')}}" >Создать новую задачу</a></h6>
+    <h6><a href="{{route('tasks.createUser')}}" >Создать нового пользователя</a></h6>
 
+        <script>
+            var app=angular.module('myApp', []);
+            app.controller('namesCtrl', function($scope) {
+                $scope.names = [
+                    @foreach($tasks as $task)
+                    { task:'{{$task->task}}',taskValue:'{{$task->task_value}}',id:'{{$task->id}}'},
+                    @endforeach
+                ];
 
+            });
+            app.controller('usersCtrl', function($scope) {
+                $scope.users = [
+                        @foreach($users as $user)
+                    '{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}',
+                    @endforeach
+                ];
+
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
     </div>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+
