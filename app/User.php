@@ -10,14 +10,15 @@ class User extends Model
         'first_name',
         'middle_name',
         'last_name',
-        'task_id'
+        'task_id',
+        'profession'
     ];
     public function tasks(){
 
         return $this->belongsToMany('App\Task');
     }
 
- 
+
 
 
 

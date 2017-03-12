@@ -1,4 +1,4 @@
-
+.top {margin-top: 40px;}
 .main1 {
     margin-top: 100px;
     border:1px dashed green;
@@ -45,4 +45,42 @@ text-align: left;}
 .test{
     font-size: 20px;
     color:green;
+}
+.move{
+    float:right;
+}
+.st,.st2{font-size: 25px;
+    padding-bottom: 10px;
+    padding-top: 20px;}
+.st {
+    font-weight: bolder;
+    font-family: "Akrobat-ExtraLight";
+}
+.st2 {
+color:green;
+    font-family: "UKIJDiT";}
+.st2:hover{
+    background-color:#F6F7F6;
+}
+.head {font-family: "UKIJDiT";}
+.lines {margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 8px 15px 20px lightgrey;
+border:1px dashed green;}
+.lines2 {margin-bottom: 40px;
+    margin-top: 40px;
+    box-shadow: 8px 15px 20px lightgrey;
+    border-bottom:1px dashed green;}
+.head,.buttons-lines {text-align: center;}
+.green {color:green;}
+p input {width:200px;
+    height: 40px;
+    padding-left: 10px;
+    transition: width 2s;}
+p input:hover{
+    width: 400px;
+
+}
+ input:focus{
+    outline:green solid 1px;
 }

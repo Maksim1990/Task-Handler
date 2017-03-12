@@ -1,12 +1,11 @@
 @extends('layots.app')
 
 @section ('content')
-    <div class="col-sm-8 col-sm-offset-2 main">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 main">
+        <h1 class="head">Создать новую задачу</h1>
+        <p style="text-align: center;">Пожалуйста, заполните поля для создания новой задачи</p>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 lines">
 
-
-        <p>Пожалуйста, заполните поля для создания новой задачи</p>
-    </div>
-    <div class="col-sm-8 col-sm-offset-2  main" >
         {!! Form::open(['method'=>'POST','action'=>'TaskController@store'])!!}
 
         <div class="form-group">
@@ -34,6 +33,7 @@
         <div class="form-group">
             {!! Form::label('finish_date','Дата окончания:') !!}
             {!! Form::date('finish_date', \Carbon\Carbon::now()) !!}
+        </div>
         </div>
         <div class="form-group">
             {!! Form::submit('Создать задачу') !!}

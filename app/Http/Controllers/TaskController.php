@@ -75,7 +75,7 @@ class TaskController extends Controller
         User::create($request->all());
 
 
-        return redirect('/tasks');
+        return redirect('/users');
     }
     /**
      * Display the specified resource.

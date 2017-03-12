@@ -4,7 +4,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <div class="col-sm-10 col-sm-offset-1  main" ng-app="myApp" ng-controller="namesCtrl" >
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 main" ng-app="myApp" ng-controller="namesCtrl">
+        <h1 class="head">Список задач</h1>
 
 
         <p><input type="text" ng-model="test" placeholder="Искать...">
@@ -13,6 +14,7 @@
 
         <div class="col-sm-9"></div>
         <div class="col-sm-3" id="time"></div>
+        <div class=" lines2">
             <table style="width:100%">
 
                 <tr>
@@ -124,9 +126,9 @@
             </table>
 
 
-    <h6><a href="{{route('tasks.create')}}" >Создать новую задачу</a></h6>
-    <h6><a href="{{route('tasks.createUser')}}" >Создать нового пользователя</a></h6>
-
+    <h6><a href="{{route('tasks.create')}}" class="btn btn-success btn-sm">Создать новую задачу</a></h6>
+    <h6><a href="{{route('tasks.createUser')}}" class="btn btn-success btn-sm">Создать нового пользователя</a></h6>
+   <h6><a href="{{route('tasks.users')}}" class="btn btn-success btn-sm">Перейти к списку пользователей</a></h6>
         <script>
             var app=angular.module('myApp', []);
             app.controller('namesCtrl', function($scope) {
@@ -141,6 +143,7 @@
 
         </script>
 
+    </div>
     </div>
     <script>
         $(document).ready(function(){
