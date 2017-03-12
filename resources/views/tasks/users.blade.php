@@ -11,8 +11,8 @@
                 @if(!$users->isEmpty())
             <ol>
         @foreach($users as $user)
-            <li class="st" ng-repeat="x in names | filter:test" ng-if="'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}' == x"><a href="{{route('tasks.showUser',compact('user') )}}" ng-bind="x" class="st"></a>
-            ---- <span>{{$user->profession}}</span>
+            <li class="st" ng-repeat="x in names | filter:test" ng-if="'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}' == x.name"><a href="{{route('tasks.showUser',compact('user') )}}" ng-bind="x.name" class="st"></a>
+            ---- <span ng-bind="x.profession"></span>
             </li></br>
         @endforeach
 </ol>
@@ -31,7 +31,7 @@
         app.controller('userCtrl', function($scope) {
             $scope.names = [
                     @foreach($users as $user)
-               '{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}',
+               { name:'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}',profession:'{{$user->profession}}'},
                 @endforeach
 
             ];
