@@ -18,8 +18,8 @@ class CreateTasksTable extends Migration
             $table->string('user');
             $table->string('task');
             $table->string('task_value');
-            $table->datetime('start_date');
-            $table->datetime('finish_date');
+            $table->date('start_date');
+            $table->date('finish_date');
             $table->string('status');
             $table->timestamps();
         });

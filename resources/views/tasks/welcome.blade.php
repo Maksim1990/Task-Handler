@@ -11,6 +11,13 @@
         <link href="{!! asset('css/set1.css') !!}" media="all" rel="stylesheet" type="text/css" />
         <link href="{!! asset('css/style.css') !!}" media="all" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="{!! asset('favicon.ico') !!}">
+        <style>
+            body{
+                background: url("{!! asset('img/back1.jpg') !!}") 100% repeat-y ;
+                background-size: cover;
+
+            }
+        </style>
         <script>
             function printTime(){
                 var d = new Date();
@@ -73,7 +80,7 @@
                             <img src="{!! asset('img/2.jpg') !!}"/>
                             <figcaption>
                                 <h2>Список <span>задач</span></h2>
-                                <p>When Layla appears, she brings an eternal summer along.</p>
+                                <p>Создавайте, планируйте и отслеживайте задачи.</p>
                                 <a href="{{route('tasks.index')}}" >View more</a>
                             </figcaption>
                         </figure>
@@ -86,7 +93,7 @@
                             <img src="{!! asset('img/1.jpg') !!}"/>
                             <figcaption class="two">
                                 <h2>Список <span>пользователей</span></h2>
-                                <p>When Layla appears, she brings an eternal summer along.</p>
+                                <p>Создавайте новых пользователей и назначайте их на текущие и новые задачи.</p>
                                 <a href="{{route('tasks.users')}}" >View more</a>
                             </figcaption>
                         </figure>

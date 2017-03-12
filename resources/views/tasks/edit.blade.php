@@ -1,9 +1,10 @@
 @extends('layots.app')
 
 @section ('content')
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 main">
+        <h1 class="head">Изменить задачу</h1>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 lines">
 
-    <div class="col-sm-8 col-sm-offset-2 main">
-        <h1>Изменить задачу</h1>
         {!! Form::model($tasks,['method'=>'PATCH','action'=>['TaskController@update',$tasks->id]])!!}
         {{ csrf_field() }}
 
@@ -32,6 +33,7 @@
         <div class="form-group">
             {!! Form::label('finish_date','Дата окончания:') !!}
             {!! Form::date('finish_date', \Carbon\Carbon::now()) !!}
+        </div>
         </div>
         <div class="form-group">
             {!! Form::submit('Изменить задачу') !!}

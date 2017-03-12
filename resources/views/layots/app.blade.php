@@ -40,11 +40,11 @@
         </div>
     </div>
     <div class="col-sm-10 col-sm-offset-1">
-        <div class="col-sm-2 col-sm-offset-4">
+        <div class="col-xs-offset-2 col-xs-2 col-sm-2 col-sm-offset-4">
             <a href="{{url()->previous()}}">   <img id="back" src="{!! asset('img/back.png') !!}"></a>
         </div>
 
-        <div class="col-sm-5 col-sm-offset-1 ">
+        <div class="col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1 ">
             <a href="{{URL::to('/')}}">    <img id="home" src="{!! asset('img/home.png') !!}"></a>
         </div>
     </div>

@@ -7,20 +7,20 @@
     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 main" ng-app="myApp" ng-controller="namesCtrl">
         <h1 class="head">Список задач</h1>
 
-
+{{--Adding searching function basesd on Angular $scope--}}
         <p><input type="text" ng-model="test" placeholder="Искать...">
 
         Название задачи:<span ng-bind="test" class="test"></span></p>
 
-        <div class="col-sm-9"></div>
-        <div class="col-sm-3" id="time"></div>
+        <div class="col-xs-12 col-sm-9"></div>
+        <div class="col-xs-12col-sm-3" id="time"></div>
         <div class=" lines2">
             <table style="width:100%">
-
+                @if(!$tasks->isEmpty())
                 <tr>
                     <th>№ Номер</th>
                     <th>Идентификатор задачи</th>
-                    <th>Название</th>
+                    <th >Название<span data-html="true" data-placement="left" data-toggle="tooltip" title="Кликните на название задачи для изменения названия, описания, статуса, а также даты начала и окончания"><i class='fa fa-exclamation-circle' aria-hidden='true'></i></span></th>
                     <th>Объём работы</th>
                     <th>Дата начала</th>
                     <th>Дата окончания</th>
@@ -28,15 +28,16 @@
                     <th>Исполнитель</th>
                 </tr>
                 <?php $i=1; ?>
-                @foreach($tasks as $task)
 
+                @foreach($tasks as $task)
+                    {{--Loop through Angular $scope and bind Angular data to HTML. Searching is based on ng-bind data--}}
                 <tr  ng-repeat="x in names | filter:test" ng-if="'{{$task->task}}' == x.task">
 
                     <td><?= $i;?></td>
                     <?php $i++;?>
                     <td ng-bind="x.id"></td>
                     <td>
-                        <a href="{{route('tasks.edit',compact('task') )}}" ng-bind="x.task"></a>
+                        <a href="{{route('tasks.edit',compact('task') )}}" ng-bind="x.task" ></a>
                     </td>
                     <td ng-bind="x.taskValue"></td>
                     <td>{{$task->start_date}}</td>
@@ -64,10 +65,11 @@
                     @endif
 
                     <td>
+                        {{--Check for user existance--}}
                         @if(!$task->users->isEmpty())
                             <ol >
         @foreach($task->users as $user)
-                      <li ><a href="{{route('tasks.showUser',compact('user') )}}" >{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a></li></br>
+                      <li ><a  data-html="true" data-placement="left" data-toggle="tooltip" title="{{$user->profession}}" href="{{route('tasks.showUser',compact('user') )}}" >{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a></li></br>
         @endforeach
                             </ol>
                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#myModal2">
@@ -83,7 +85,7 @@
                                         </div>
                                         <div class="modal-body" >
                                             @foreach($users as $user)
-                                                <a href="{{route('tasks.assignUser',compact('user') )}}" class="btn btn-success btn-sm">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a>
+                                                <a style="margin-bottom: 5px;" href="{{route('tasks.assignUser',compact('user') )}}" class="btn btn-success btn-sm">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}<br><span style="color:yellow;">{{$user->profession}}</span></a>
                                             @endforeach
                                         </div>
                                         <div class="modal-footer">
@@ -107,7 +109,7 @@
                                     </div>
                                     <div class="modal-body">
                                         @foreach($users as $user)
-                     <a href="{{route('tasks.assignUser',compact('user') )}}" class="btn btn-success btn-sm">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}</a>
+                     <a style="margin-bottom: 5px;" href="{{route('tasks.assignUser',compact('user') )}}" class="btn btn-success btn-sm">{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}<br><span style="color:yellow;">{{$user->profession}}</span></a>
                                         @endforeach
                                     </div>
                                     <div class="modal-footer">
@@ -119,9 +121,12 @@
                         @endif
                     </td>
                     @endforeach
-
-
                 </tr>
+  @else <p class="warning" style="margin-top: 10px;">К сожалению, ни одной задачи ещё не создано!
+   <a href="{{route('tasks.create')}}" class="btn btn-warning btn-sm">Создать задачу</a></p>
+   @endif
+
+
 
             </table>
 

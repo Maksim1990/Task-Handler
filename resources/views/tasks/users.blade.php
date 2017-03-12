@@ -8,6 +8,7 @@
             <p ><h1 class="head green">Список пользователей</h1></p>
             <p><input type="text" ng-model="test" placeholder="Искать...">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 lines">
+                @if(!$users->isEmpty())
             <ol>
         @foreach($users as $user)
             <li class="st" ng-repeat="x in names | filter:test" ng-if="'{{$user->first_name}}  {{$user->middle_name}}   {{$user->last_name}}' == x"><a href="{{route('tasks.showUser',compact('user') )}}" ng-bind="x" class="st"></a>
@@ -15,6 +16,9 @@
             </li></br>
         @endforeach
 </ol>
+            @else <p class="warning" style="margin-top: 10px;">К сожалению, ни одного пользователя ещё не зарегестрировано!
+            <a href="{{route('tasks.createUser')}}" class="btn btn-success btn-sm">Создать пользователя</a></p>
+            @endif
                 </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
             <h6><a href="{{route('tasks.createUser')}}" class="btn btn-success btn-sm">Создать пользователя</a></h6>

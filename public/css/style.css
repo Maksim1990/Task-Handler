@@ -1,3 +1,8 @@
+body{
+    background: url('../img/back3.png') 100% repeat-y ;
+    background-size: cover;
+
+}
 .top {margin-top: 40px;}
 .main1 {
     margin-top: 100px;
@@ -7,8 +12,13 @@
 table, th, td {
     border: 1px solid black;
     text-align: center;
-
+background-color:white;
 }
+td {font-family: "Akrobat-ExtraLight";
+    font-size: 21px;}
+th {font-family: "Akrobat-Bold";
+    font-size: 23px;
+font-weight: bolder;}
 table{
     margin-top:30px;
     margin-bottom: 30px;
@@ -30,6 +40,12 @@ margin-left:10px;
     text-shadow: 2px 2px 20px gray;}
 .fa-question-circle:hover {
     text-shadow:none;
+}
+.fa-exclamation-circle {
+    color:green;
+    font-size: 20px;
+
+    margin-left:10px;
 }
 .info {padding: 15px 10px 5px 10px;
 text-align: left;}
