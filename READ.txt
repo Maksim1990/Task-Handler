@@ -2,7 +2,7 @@ Welcome to Task Handler application!
 
 In order to start please proceed following instructions:
 
-- create folder on your local computer with name taskHandler
+- create folder on your local computer ( for instance taskHandler )
 - clone latest application from GitHub https://github.com/Maksim1990/Task-Handler.git
 - add new domain to your local server (all application functionality were tested on the latest version of OpenServer.
 OpenServer settings:
@@ -21,7 +21,7 @@ OpenServer cross-platform web server solution
 Apache-2.4
 PHP-5.6
 MySQL-5.5
-Backend -Laravel framework
+Backend -Laravel 5 framework
 
 Also this application is available online at the following address :
 http://discoveringworld.net/taskhandler
